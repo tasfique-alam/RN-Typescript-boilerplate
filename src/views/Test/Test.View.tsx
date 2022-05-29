@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Button, Text, View} from "react-native";
+import {Button} from "react-native";
 import {withStore} from "@/store/withStore";
 import {IRootState} from "@/store/States/rootState";
 import {ISetState} from "@/store";
@@ -20,12 +20,12 @@ interface ITestViewState {
 class TestView extends React.Component<ITestViewProps, ITestViewState> {
     render() {
         return (
-            <View>
+            <Block>
                 <ThemeExampleView />
-                <View style={{...padding({left: 30, right: 30})}}>
+                <Block>
 
-                </View>
-            </View>
+                </Block>
+            </Block>
         );
     }
 }

@@ -5,7 +5,6 @@ import { sizes } from '../../../config/fonts.config'
 
 interface IBlock {
     onPress?(): void,
-    props?: any,
     flex?: boolean,
     width?: boolean,
     relative?: boolean,
@@ -38,7 +37,7 @@ interface IBlock {
 const Block: React.FC<IBlock> = (props) => {
 
     const handleMargins = () => {
-        const { margin } = props;
+        const { margin }:any = props;
         if (typeof margin === 'number') {
             return {
                 marginTop: margin,
@@ -156,7 +155,7 @@ const Block: React.FC<IBlock> = (props) => {
         wrap,
         style,
         children,
-        container
+        container,
     } = props;
 
     const blockStyles = [
